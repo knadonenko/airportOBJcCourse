@@ -74,7 +74,6 @@
 
 }
 
-
 - (void)changeSource {
     switch (_segmentedControl.selectedSegmentIndex) {
         case 0:
@@ -89,9 +88,6 @@
 
     [self.tableView reloadData];
 }
-
-
-
 
 #pragma mark - UITableViewDataSource
 

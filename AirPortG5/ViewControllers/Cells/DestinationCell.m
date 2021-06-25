@@ -22,7 +22,7 @@
         [self.contentView addSubview:_labelName];
 
 
-        _labelCode = [[UILabel alloc] initWithFrame: CGRectMake(10, 40, ([UIScreen mainScreen].bounds.size.width - 20), 20)];
+        _labelCode = [[UILabel alloc] initWithFrame: CGRectMake(10, 10, ([UIScreen mainScreen].bounds.size.width - 20), 20)];
 
         _labelCode.textAlignment = NSTextAlignmentCenter;
 
