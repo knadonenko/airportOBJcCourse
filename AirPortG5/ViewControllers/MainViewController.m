@@ -59,6 +59,14 @@
     _arrivalButton.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3];
     [_arrivalButton addTarget:self action:@selector(placeButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_arrivalButton];
+
+    _feedsButton = [[UIBarButtonItem alloc]
+                    initWithTitle: @"Новости"
+                    style: UIBarButtonItemStylePlain
+                    target: self
+                    action: @selector(feedsButtonDidTap:)];
+
+    self.navigationItem.rightBarButtonItem = _feedsButton;
 }
 
 - (void)placeButtonDidTap:(UIButton *)sender {
@@ -105,6 +113,24 @@
     }
 
     [button setTitle: title forState: UIControlStateNormal];
+}
+
+- (void)feedsButtonDidTap:(UIButton *)sender {
+
+    [[NetworkManager sharedInstance] feedsWithRequest: @"ru" withCompletion: ^(NSArray *feeds) {
+
+        if (feeds.count > 0) {
+            FeedViewController *feedViewController = [[FeedViewController alloc] initWithFeeds: feeds];
+            [self.navigationController showViewController:feedViewController sender:self];
+        }
+        else {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Увы!" message:@"Не получилось найти новости" preferredStyle: UIAlertControllerStyleAlert];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:(UIAlertActionStyleDefault) handler:nil]];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+
+    }];
+
 }
 
 @end
