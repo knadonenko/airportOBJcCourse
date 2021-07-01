@@ -6,25 +6,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NetworkManager.h"
 #import "FeedViewController.h"
-
-typedef struct SearchRequest {
-
-    __unsafe_unretained NSString *origin;
-
-    __unsafe_unretained NSString *destionation;
-
-    __unsafe_unretained NSDate *departDate;
-
-    __unsafe_unretained NSDate *returnDate;
-    
-} SearchRequest;
+#import "Enums.h"
+#import "NetworkManager.h"
+#import "DataManager.h"
 
 @interface MainViewController : UIViewController
 @property (nonatomic, strong) UIButton *departureButton;
 @property (nonatomic, strong) UIButton *arrivalButton;
-@property (nonatomic, strong) UIBarButtonItem *feedsButton;
 @property (nonatomic) SearchRequest searchRequest;
 @end
 

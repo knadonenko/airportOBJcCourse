@@ -7,13 +7,9 @@
 
 #import <UIKit/UIKit.h>
 #import "DataManager.h"
+#import "Enums.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-typedef enum PlaceType {
-    PlaceTypeArrival,
-    PlaceTypeDeparture
-} PlaceType;
 
 @protocol PlaceViewControllerDelegate <NSObject>
 

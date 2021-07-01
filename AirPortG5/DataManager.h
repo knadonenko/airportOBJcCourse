@@ -9,25 +9,20 @@
 #import "Country.h"
 #import "City.h"
 #import "Airport.h"
+#import "Enums.h"
 
 #define kDataManagerLoadDataDidComplete @"DataManagerLoadDataDidComplete"
-
-typedef enum DataSourceType {
-    DataSourceTypeCountry,
-    DataSourceTypeCity,
-    DataSourceTypeAirport
-} DataSourceType;
-
 
 @interface DataManager : NSObject
 
 +(instancetype) sharedInstance;
-
 -(void) loadData;
 
 @property (nonatomic, strong, readonly) NSArray *contries;
 @property (nonatomic, strong, readonly) NSArray *cities;
 @property (nonatomic, strong, readonly) NSArray *airports;
 
+- (City *)cityForIATA:(NSString *)iata;
+- (City *)cityForLocation:(CLLocation *)location;
 
 @end

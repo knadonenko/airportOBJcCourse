@@ -15,24 +15,19 @@
 
 @implementation FeedViewController
 
-- (instancetype)initWithFeeds:(NSArray *)feeds {
+- (void)viewDidLoad {
 
-    self = [super init];
+    [super viewDidLoad];
 
-    if (self) {
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.tableView registerClass:[FeedCell class] forCellReuseIdentifier:FeedCellReuseIdentifier];
 
-        _feeds = feeds;
+    [[NetworkManager sharedInstance] feedsWithRequest: @"ru" withCompletion: ^(NSArray *feeds) {
+        self.feeds = feeds;
+        [self.tableView reloadData];
+    }];
 
-        self.title = @"Новости";
-
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
-        [self.tableView registerClass:[FeedCell class] forCellReuseIdentifier:FeedCellReuseIdentifier];
-    }
-
-    return self;
 }
-
 
 #pragma mark - UITableViewDataSource & UITableViewDelegate
 
@@ -41,7 +36,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
     FeedCell *cell = [tableView dequeueReusableCellWithIdentifier:FeedCellReuseIdentifier forIndexPath:indexPath];
 
     cell.feed = [_feeds objectAtIndex:indexPath.row];
@@ -50,14 +44,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-
     return 140.0;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
     FeedInfoViewController *feedInfoViewController = [[FeedInfoViewController alloc] initWithFeed: [_feeds objectAtIndex:indexPath.row]];
-
     [self.navigationController showViewController:feedInfoViewController sender:self];
 }
 
