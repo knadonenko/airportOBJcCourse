@@ -31,6 +31,8 @@
 		BA98F691268A599D00ECA59F /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = BA98F690268A599D00ECA59F /* Feed.m */; };
 		BA98F696268A5D1300ECA59F /* FeedInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA98F695268A5D1300ECA59F /* FeedInfoViewController.m */; };
 		BA98F699268A615600ECA59F /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA98F698268A615600ECA59F /* NetworkManager.m */; };
+		BAAF664E26936EE10002AC7E /* PlaceCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAF664D26936EE10002AC7E /* PlaceCollectionCell.m */; };
+		BAAF66532693776E0002AC7E /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAF66522693776E0002AC7E /* TabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,10 @@
 		BA98F695268A5D1300ECA59F /* FeedInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedInfoViewController.m; sourceTree = "<group>"; };
 		BA98F698268A615600ECA59F /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		BA98F69B268A616D00ECA59F /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		BAAF664D26936EE10002AC7E /* PlaceCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceCollectionCell.m; sourceTree = "<group>"; };
+		BAAF664F26936EED0002AC7E /* PlaceCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceCollectionCell.h; sourceTree = "<group>"; };
+		BAAF66512693776E0002AC7E /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		BAAF66522693776E0002AC7E /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,7 @@
 		BA41D2542681CE74008526FE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BAAF6650269377380002AC7E /* TabBar */,
 				BA09C646268CFFCD00215B98 /* MapViewController */,
 				BA98F693268A5CF300ECA59F /* FeedInfoViewController */,
 				BA98F689268A54BB00ECA59F /* FeedViewController */,
@@ -192,6 +199,7 @@
 		BA98F6362685D0C800ECA59F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				BAAF664C2693681F0002AC7E /* Place */,
 				BA98F688268A54A900ECA59F /* Destination */,
 				BA98F684268A52D100ECA59F /* FeedCell */,
 			);
@@ -243,6 +251,24 @@
 				BA09C655268DBA7A00215B98 /* Enums.h */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		BAAF664C2693681F0002AC7E /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				BAAF664D26936EE10002AC7E /* PlaceCollectionCell.m */,
+				BAAF664F26936EED0002AC7E /* PlaceCollectionCell.h */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		BAAF6650269377380002AC7E /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				BAAF66512693776E0002AC7E /* TabBarController.h */,
+				BAAF66522693776E0002AC7E /* TabBarController.m */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,7 +343,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAF66532693776E0002AC7E /* TabBarController.m in Sources */,
 				BA98F691268A599D00ECA59F /* Feed.m in Sources */,
+				BAAF664E26936EE10002AC7E /* PlaceCollectionCell.m in Sources */,
 				BA09C64C268D009700215B98 /* LocationService.m in Sources */,
 				8F3F7988267922D4000B852F /* MainViewController.m in Sources */,
 				8F3F7982267922D4000B852F /* AppDelegate.m in Sources */,
