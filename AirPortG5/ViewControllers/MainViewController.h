@@ -10,10 +10,14 @@
 #import "Enums.h"
 #import "NetworkManager.h"
 #import "DataManager.h"
+#import "TicketsViewController.h"
+#import "PlacesViewController.h"
 
 @interface MainViewController : UIViewController
 @property (nonatomic, strong) UIButton *departureButton;
 @property (nonatomic, strong) UIButton *arrivalButton;
+@property (nonatomic, strong) UIView *placeContainerView;
+@property (nonatomic, strong) UIButton *searchButton;
 @property (nonatomic) SearchRequest searchRequest;
 @end
 

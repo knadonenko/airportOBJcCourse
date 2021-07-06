@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 #import "MainViewController.h"
 #import "FeedViewController.h"
+#import "TicketsViewController.h"
 
 @interface TabBarController : UITabBarController
 

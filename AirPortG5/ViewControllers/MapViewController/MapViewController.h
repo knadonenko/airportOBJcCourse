@@ -10,6 +10,7 @@
 #import "NetworkManager.h"
 #import "DataManager.h"
 #import "LocationService.h"
+#import "CoreDataHelper.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) City *origin;
 @property (nonatomic, strong) NSArray *prices;
 @property (nonatomic, strong) LocationService *locationService;
+
+- (void)getMapPriceBy:(NSString *)title;
+- (void) showFavoriteAlert:(MapPrice *) mapPrice;
 
 @end
 
