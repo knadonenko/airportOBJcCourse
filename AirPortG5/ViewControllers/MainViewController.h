@@ -12,6 +12,8 @@
 #import "DataManager.h"
 #import "TicketsViewController.h"
 #import "PlacesViewController.h"
+#import "ProgressView.h"
+#import "FirstViewController.h"
 
 @interface MainViewController : UIViewController
 @property (nonatomic, strong) UIButton *departureButton;

@@ -15,11 +15,12 @@
 
 @interface TicketCell : UITableViewCell
 
-    @property (nonatomic, strong) Ticket *ticket;
-    @property (nonatomic, strong) UIImageView *airlineLogoView;
-    @property (nonatomic, strong) UILabel *priceLabel;
-    @property (nonatomic, strong) UILabel *placesLabel;
-    @property (nonatomic, strong) UILabel *dateLabel;
-    @property (nonatomic, strong) FavoriteTicket *favoriteTicket;
+@property (nonatomic, strong) Ticket *ticket;
+@property (nonatomic, strong) UIImageView *airlineLogoView;
+@property (nonatomic, strong) UILabel *priceLabel;
+@property (nonatomic, strong) UILabel *placesLabel;
+@property (nonatomic, strong) UILabel *dateLabel;
+@property (nonatomic, strong) FavoriteTicket *favoriteTicket;
+- (void)animate;
 
 @end
