@@ -45,6 +45,11 @@
     UINavigationController *feedNavigationController = [[UINavigationController alloc] initWithRootViewController: feedViewController];
     [controllers addObject:feedNavigationController];
 
+    TicketsViewController *favoriteViewController = [[TicketsViewController alloc] initFavoriteTicketsController];
+    favoriteViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Избранное" image:[UIImage imageNamed:@"favorite"] selectedImage:[UIImage imageNamed:@"favorite"]];
+    UINavigationController *favoriteNavigationController = [[UINavigationController alloc] initWithRootViewController:favoriteViewController];
+    [controllers addObject:favoriteNavigationController];
+
     return controllers;
 }
 
