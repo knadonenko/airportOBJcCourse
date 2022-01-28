@@ -22,6 +22,11 @@
 		8F3F79AF26793DD8000B852F /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F3F79AC26793DD8000B852F /* airports.json */; };
 		BA98F6392685D10700ECA59F /* DestinationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA98F6382685D10700ECA59F /* DestinationCell.m */; };
 		BA98F63C2685D31C00ECA59F /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA98F63B2685D31C00ECA59F /* PlacesViewController.m */; };
+		BA98F687268A52F500ECA59F /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA98F686268A52F500ECA59F /* FeedCell.m */; };
+		BA98F68C268A54E000ECA59F /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA98F68B268A54E000ECA59F /* FeedViewController.m */; };
+		BA98F691268A599D00ECA59F /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = BA98F690268A599D00ECA59F /* Feed.m */; };
+		BA98F696268A5D1300ECA59F /* FeedInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA98F695268A5D1300ECA59F /* FeedInfoViewController.m */; };
+		BA98F699268A615600ECA59F /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA98F698268A615600ECA59F /* NetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +56,16 @@
 		BA98F6382685D10700ECA59F /* DestinationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationCell.m; sourceTree = "<group>"; };
 		BA98F63A2685D31C00ECA59F /* PlacesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacesViewController.h; sourceTree = "<group>"; };
 		BA98F63B2685D31C00ECA59F /* PlacesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacesViewController.m; sourceTree = "<group>"; };
+		BA98F685268A52F500ECA59F /* FeedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
+		BA98F686268A52F500ECA59F /* FeedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
+		BA98F68A268A54E000ECA59F /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		BA98F68B268A54E000ECA59F /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		BA98F690268A599D00ECA59F /* Feed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
+		BA98F692268A59A500ECA59F /* Feed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
+		BA98F694268A5D1300ECA59F /* FeedInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedInfoViewController.h; sourceTree = "<group>"; };
+		BA98F695268A5D1300ECA59F /* FeedInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedInfoViewController.m; sourceTree = "<group>"; };
+		BA98F698268A615600ECA59F /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		BA98F69B268A616D00ECA59F /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +98,7 @@
 		8F3F797F267922D4000B852F /* AirPortG5 */ = {
 			isa = PBXGroup;
 			children = (
+				BA98F697268A605500ECA59F /* NetworkManager */,
 				BA41D2552681CE87008526FE /* Core */,
 				BA41D2542681CE74008526FE /* ViewControllers */,
 				8F3F799B267924C3000B852F /* Model */,
@@ -107,6 +123,8 @@
 				8F3F79A0267926DC000B852F /* City.m */,
 				8F3F79A226792A9A000B852F /* Airport.h */,
 				8F3F79A326792A9A000B852F /* Airport.m */,
+				BA98F690268A599D00ECA59F /* Feed.m */,
+				BA98F692268A59A500ECA59F /* Feed.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +132,8 @@
 		BA41D2542681CE74008526FE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BA98F693268A5CF300ECA59F /* FeedInfoViewController */,
+				BA98F689268A54BB00ECA59F /* FeedViewController */,
 				BA98F6362685D0C800ECA59F /* Cells */,
 				8F3F7986267922D4000B852F /* MainViewController.h */,
 				8F3F7987267922D4000B852F /* MainViewController.m */,
@@ -138,10 +158,55 @@
 		BA98F6362685D0C800ECA59F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				BA98F688268A54A900ECA59F /* Destination */,
+				BA98F684268A52D100ECA59F /* FeedCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BA98F684268A52D100ECA59F /* FeedCell */ = {
+			isa = PBXGroup;
+			children = (
+				BA98F685268A52F500ECA59F /* FeedCell.h */,
+				BA98F686268A52F500ECA59F /* FeedCell.m */,
+			);
+			path = FeedCell;
+			sourceTree = "<group>";
+		};
+		BA98F688268A54A900ECA59F /* Destination */ = {
+			isa = PBXGroup;
+			children = (
 				BA98F6372685D10700ECA59F /* DestinationCell.h */,
 				BA98F6382685D10700ECA59F /* DestinationCell.m */,
 			);
-			path = Cells;
+			path = Destination;
+			sourceTree = "<group>";
+		};
+		BA98F689268A54BB00ECA59F /* FeedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA98F68A268A54E000ECA59F /* FeedViewController.h */,
+				BA98F68B268A54E000ECA59F /* FeedViewController.m */,
+			);
+			path = FeedViewController;
+			sourceTree = "<group>";
+		};
+		BA98F693268A5CF300ECA59F /* FeedInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA98F694268A5D1300ECA59F /* FeedInfoViewController.h */,
+				BA98F695268A5D1300ECA59F /* FeedInfoViewController.m */,
+			);
+			path = FeedInfoViewController;
+			sourceTree = "<group>";
+		};
+		BA98F697268A605500ECA59F /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				BA98F698268A615600ECA59F /* NetworkManager.m */,
+				BA98F69B268A616D00ECA59F /* NetworkManager.h */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +239,7 @@
 				TargetAttributes = {
 					8F3F797C267922D4000B852F = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -215,15 +281,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA98F691268A599D00ECA59F /* Feed.m in Sources */,
 				8F3F7988267922D4000B852F /* MainViewController.m in Sources */,
 				8F3F7982267922D4000B852F /* AppDelegate.m in Sources */,
 				BA98F6392685D10700ECA59F /* DestinationCell.m in Sources */,
+				BA98F696268A5D1300ECA59F /* FeedInfoViewController.m in Sources */,
+				BA98F687268A52F500ECA59F /* FeedCell.m in Sources */,
 				8F3F79A426792A9A000B852F /* Airport.m in Sources */,
 				BA98F63C2685D31C00ECA59F /* PlacesViewController.m in Sources */,
 				8F3F79A1267926DC000B852F /* City.m in Sources */,
 				8F3F7993267922D8000B852F /* main.m in Sources */,
 				8F3F79A726792C7A000B852F /* DataManager.m in Sources */,
 				8F3F7985267922D4000B852F /* SceneDelegate.m in Sources */,
+				BA98F68C268A54E000ECA59F /* FeedViewController.m in Sources */,
+				BA98F699268A615600ECA59F /* NetworkManager.m in Sources */,
 				8F3F799E26792514000B852F /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7VPDNN42Y;
 				INFOPLIST_FILE = AirPortG5/Info.plist;
@@ -368,6 +440,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MoRSStudio.AirPortG5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AirPortG5/Model/AirPortG5-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -377,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7VPDNN42Y;
 				INFOPLIST_FILE = AirPortG5/Info.plist;
@@ -386,6 +462,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MoRSStudio.AirPortG5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AirPortG5/Model/AirPortG5-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

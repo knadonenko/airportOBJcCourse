@@ -6,6 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NetworkManager.h"
+#import "FeedViewController.h"
 
 typedef struct SearchRequest {
 
@@ -16,11 +18,13 @@ typedef struct SearchRequest {
     __unsafe_unretained NSDate *departDate;
 
     __unsafe_unretained NSDate *returnDate;
+    
 } SearchRequest;
 
 @interface MainViewController : UIViewController
 @property (nonatomic, strong) UIButton *departureButton;
 @property (nonatomic, strong) UIButton *arrivalButton;
+@property (nonatomic, strong) UIBarButtonItem *feedsButton;
 @property (nonatomic) SearchRequest searchRequest;
 @end
 
