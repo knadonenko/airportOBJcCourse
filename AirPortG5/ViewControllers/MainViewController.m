@@ -6,11 +6,12 @@
 //
 
 #import "MainViewController.h"
+#import "PlacesViewController.h"
 #import "DataManager.h"
 
-@interface MainViewController ()
-
+@interface MainViewController () <PlaceViewControllerDelegate>
 @end
+
 
 @implementation MainViewController
 
@@ -20,7 +21,7 @@
     [[DataManager sharedInstance] loadData];
     [self addSubviews];
     self.view.backgroundColor = UIColor.cyanColor;
-    
+    self.title = @"Поиск";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadDidComplete) name:kDataManagerLoadDataDidComplete object:nil];
 }
 
@@ -29,11 +30,11 @@
 }
 
 - (BOOL)prefersStatusBarHidden {
-   return NO;
+    return NO;
 }
 
 - (void) loadDidComplete {
-//    self.view.backgroundColor = UIColor.greenColor;
+    //    self.view.backgroundColor = UIColor.greenColor;
 }
 
 - (void) dealloc {
@@ -42,46 +43,68 @@
 
 - (void) addSubviews {
 
-    CGRect frameLabelFrom = CGRectMake(16.0, 140.0, ([UIScreen mainScreen].bounds.size.width - 32.0), 20.0);
-
-    _labelFrom = [[UILabel alloc] initWithFrame: frameLabelFrom];
-    _labelFrom.font = [UIFont systemFontOfSize:20.0 weight:UIFontWeightBold];
-    _labelFrom.textColor = [UIColor darkGrayColor];
-    _labelFrom.textAlignment = NSTextAlignmentCenter;
-    _labelFrom.text = @"Выберите город вылета";
-
-    [self.view addSubview: _labelFrom];
+    _departureButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_departureButton setTitle:@"Откуда" forState: UIControlStateNormal];
+    _departureButton.tintColor = [UIColor blackColor];
+    _departureButton.frame = CGRectMake(30.0, 140.0, [UIScreen mainScreen].bounds.size.width - 60.0, 60.0);
+    _departureButton.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3];
+    [_departureButton addTarget:self action:@selector(placeButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_departureButton];
 
 
-    CGRect frameTextFieldFrom = CGRectMake(16.0, 180.0, ([UIScreen mainScreen].bounds.size.width - 32.0), 40.0);
+    _arrivalButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_arrivalButton setTitle:@"Куда" forState: UIControlStateNormal];
+    _arrivalButton.tintColor = [UIColor blackColor];
+    _arrivalButton.frame = CGRectMake(30.0, CGRectGetMaxY(_departureButton.frame) + 20.0, [UIScreen mainScreen].bounds.size.width - 60.0, 60.0);
+    _arrivalButton.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3];
+    [_arrivalButton addTarget:self action:@selector(placeButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_arrivalButton];
+}
 
-    _textFieldFrom = [[UITextField alloc] initWithFrame:frameTextFieldFrom];
-    _textFieldFrom.borderStyle = UITextBorderStyleRoundedRect;
-    _textFieldFrom.placeholder = @"Откуда";
-    _textFieldFrom.font = [UIFont systemFontOfSize:20.0 weight:UIFontWeightLight];
+- (void)placeButtonDidTap:(UIButton *)sender {
 
-    [self.view addSubview: _textFieldFrom];
+    PlacesViewController *placeViewController;
+    if ([sender isEqual:_departureButton]) {
+        placeViewController = [[PlacesViewController alloc] initWithType: PlaceTypeDeparture];
+    }
+    else {
+        placeViewController = [[PlacesViewController alloc] initWithType: PlaceTypeArrival];
+    }
+    placeViewController.delegate = self;
+    [self.navigationController pushViewController: placeViewController animated:YES];
+}
 
+#pragma mark - PlacesViewControllerDelegate
 
-    CGRect frameLabelDestination = CGRectMake(16.0, 240.0, ([UIScreen mainScreen].bounds.size.width - 32.0), 20.0);
+- (void)selectPlace:(id)place withType:(PlaceType)placeType andDataType:(DataSourceType)dataType {
 
-    _labelDestination = [[UILabel alloc] initWithFrame: frameLabelDestination];
-    _labelDestination.font = [UIFont systemFontOfSize:20.0 weight:UIFontWeightBold];
-    _labelDestination.textColor = [UIColor darkGrayColor];
-    _labelDestination.textAlignment = NSTextAlignmentCenter;
-    _labelDestination.text = @"Выберите город посадки";
+    [self setPlace:place withDataType:dataType andPlaceType:placeType forButton: (placeType == PlaceTypeDeparture) ? _departureButton : _arrivalButton ];
+}
 
-    [self.view addSubview: _labelDestination];
+- (void)setPlace:(id)place withDataType:(DataSourceType)dataType andPlaceType:(PlaceType)placeType forButton:(UIButton *)button {
 
+    NSString *title;
 
-    CGRect frameTextFieldDestination = CGRectMake(16.0, 280.0, ([UIScreen mainScreen].bounds.size.width - 32.0), 40.0);
+    NSString *iata;
 
-    _textFieldDestination = [[UITextField alloc] initWithFrame: frameTextFieldDestination];
-    _textFieldDestination.borderStyle = UITextBorderStyleRoundedRect;
-    _textFieldDestination.placeholder = @"Куда";
-    _textFieldDestination.font = [UIFont systemFontOfSize:20.0 weight:UIFontWeightLight];
+    if (dataType == DataSourceTypeCity) {
+        City *city = (City *)place;
+        title = city.name;
+        iata = city.code;
+    }
+    else if (dataType == DataSourceTypeAirport) {
+        Airport *airport = (Airport *)place;
+        title = airport.name;
+        iata = airport.cityCode;
+    }
+    if (placeType == PlaceTypeDeparture) {
+        _searchRequest.origin = iata;
+    }
+    else {
+        _searchRequest.destionation = iata;
+    }
 
-    [self.view addSubview: _textFieldDestination];
+    [button setTitle: title forState: UIControlStateNormal];
 }
 
 @end
