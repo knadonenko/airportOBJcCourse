@@ -8,14 +8,13 @@
 #import <UIKit/UIKit.h>
 #import "FeedInfoViewController.h"
 #import "FeedCell.h"
+#import "NetworkManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FeedViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *feeds;
-
-- (instancetype)initWithFeeds:(NSArray *)feeds;
 
 @end
 

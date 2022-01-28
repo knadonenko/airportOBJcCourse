@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8F3F7982267922D4000B852F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3F7981267922D4000B852F /* AppDelegate.m */; };
-		8F3F7985267922D4000B852F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3F7984267922D4000B852F /* SceneDelegate.m */; };
 		8F3F7988267922D4000B852F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3F7987267922D4000B852F /* MainViewController.m */; };
 		8F3F798D267922D8000B852F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3F798C267922D8000B852F /* Assets.xcassets */; };
 		8F3F7990267922D8000B852F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F3F798E267922D8000B852F /* LaunchScreen.storyboard */; };
-		8F3F7993267922D8000B852F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3F7992267922D8000B852F /* main.m */; };
 		8F3F799E26792514000B852F /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3F799D26792514000B852F /* Country.m */; };
 		8F3F79A1267926DC000B852F /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3F79A0267926DC000B852F /* City.m */; };
 		8F3F79A426792A9A000B852F /* Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3F79A326792A9A000B852F /* Airport.m */; };
@@ -20,6 +18,12 @@
 		8F3F79AD26793DD8000B852F /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F3F79AA26793DD8000B852F /* cities.json */; };
 		8F3F79AE26793DD8000B852F /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F3F79AB26793DD8000B852F /* countries.json */; };
 		8F3F79AF26793DD8000B852F /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F3F79AC26793DD8000B852F /* airports.json */; };
+		BA09C649268D001300215B98 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA09C648268D001300215B98 /* MapViewController.m */; };
+		BA09C64C268D009700215B98 /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = BA09C64B268D009700215B98 /* LocationService.m */; };
+		BA09C650268D028E00215B98 /* MapPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = BA09C64F268D028E00215B98 /* MapPrice.m */; };
+		BA09C652268D0D4000215B98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA09C651268D0D4000215B98 /* main.m */; };
+		BA09C654268DBA1A00215B98 /* Enums.m in Sources */ = {isa = PBXBuildFile; fileRef = BA09C653268DBA1A00215B98 /* Enums.m */; };
+		BA09C657268DBBDB00215B98 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = BA09C656268DBBDB00215B98 /* Ticket.m */; };
 		BA98F6392685D10700ECA59F /* DestinationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA98F6382685D10700ECA59F /* DestinationCell.m */; };
 		BA98F63C2685D31C00ECA59F /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA98F63B2685D31C00ECA59F /* PlacesViewController.m */; };
 		BA98F687268A52F500ECA59F /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA98F686268A52F500ECA59F /* FeedCell.m */; };
@@ -33,14 +37,11 @@
 		8F3F797D267922D4000B852F /* AirPortG5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirPortG5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F3F7980267922D4000B852F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8F3F7981267922D4000B852F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8F3F7983267922D4000B852F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		8F3F7984267922D4000B852F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		8F3F7986267922D4000B852F /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		8F3F7987267922D4000B852F /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		8F3F798C267922D8000B852F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F3F798F267922D8000B852F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F3F7991267922D8000B852F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F3F7992267922D8000B852F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8F3F799C26792514000B852F /* Country.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
 		8F3F799D26792514000B852F /* Country.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
 		8F3F799F267926DC000B852F /* City.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
@@ -52,6 +53,17 @@
 		8F3F79AA26793DD8000B852F /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cities.json; path = JSON/cities.json; sourceTree = "<group>"; };
 		8F3F79AB26793DD8000B852F /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = countries.json; path = JSON/countries.json; sourceTree = "<group>"; };
 		8F3F79AC26793DD8000B852F /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = airports.json; path = JSON/airports.json; sourceTree = "<group>"; };
+		BA09C647268D001300215B98 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		BA09C648268D001300215B98 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		BA09C64B268D009700215B98 /* LocationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationService.m; sourceTree = "<group>"; };
+		BA09C64D268D010400215B98 /* LocationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
+		BA09C64E268D025D00215B98 /* MapPrice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapPrice.h; sourceTree = "<group>"; };
+		BA09C64F268D028E00215B98 /* MapPrice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapPrice.m; sourceTree = "<group>"; };
+		BA09C651268D0D4000215B98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BA09C653268DBA1A00215B98 /* Enums.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Enums.m; sourceTree = "<group>"; };
+		BA09C655268DBA7A00215B98 /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		BA09C656268DBBDB00215B98 /* Ticket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
+		BA09C658268DBBE500215B98 /* Ticket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
 		BA98F6372685D10700ECA59F /* DestinationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationCell.h; sourceTree = "<group>"; };
 		BA98F6382685D10700ECA59F /* DestinationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationCell.m; sourceTree = "<group>"; };
 		BA98F63A2685D31C00ECA59F /* PlacesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacesViewController.h; sourceTree = "<group>"; };
@@ -98,6 +110,7 @@
 		8F3F797F267922D4000B852F /* AirPortG5 */ = {
 			isa = PBXGroup;
 			children = (
+				BA09C64A268D006F00215B98 /* LocationService */,
 				BA98F697268A605500ECA59F /* NetworkManager */,
 				BA41D2552681CE87008526FE /* Core */,
 				BA41D2542681CE74008526FE /* ViewControllers */,
@@ -109,7 +122,7 @@
 				8F3F79AB26793DD8000B852F /* countries.json */,
 				8F3F798C267922D8000B852F /* Assets.xcassets */,
 				8F3F7991267922D8000B852F /* Info.plist */,
-				8F3F7992267922D8000B852F /* main.m */,
+				BA09C651268D0D4000215B98 /* main.m */,
 			);
 			path = AirPortG5;
 			sourceTree = "<group>";
@@ -125,13 +138,36 @@
 				8F3F79A326792A9A000B852F /* Airport.m */,
 				BA98F690268A599D00ECA59F /* Feed.m */,
 				BA98F692268A59A500ECA59F /* Feed.h */,
+				BA09C656268DBBDB00215B98 /* Ticket.m */,
+				BA09C658268DBBE500215B98 /* Ticket.h */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BA09C646268CFFCD00215B98 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA09C647268D001300215B98 /* MapViewController.h */,
+				BA09C648268D001300215B98 /* MapViewController.m */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		BA09C64A268D006F00215B98 /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				BA09C64B268D009700215B98 /* LocationService.m */,
+				BA09C64D268D010400215B98 /* LocationService.h */,
+				BA09C64E268D025D00215B98 /* MapPrice.h */,
+				BA09C64F268D028E00215B98 /* MapPrice.m */,
+			);
+			path = LocationService;
 			sourceTree = "<group>";
 		};
 		BA41D2542681CE74008526FE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BA09C646268CFFCD00215B98 /* MapViewController */,
 				BA98F693268A5CF300ECA59F /* FeedInfoViewController */,
 				BA98F689268A54BB00ECA59F /* FeedViewController */,
 				BA98F6362685D0C800ECA59F /* Cells */,
@@ -149,8 +185,6 @@
 				8F3F798E267922D8000B852F /* LaunchScreen.storyboard */,
 				8F3F7980267922D4000B852F /* AppDelegate.h */,
 				8F3F7981267922D4000B852F /* AppDelegate.m */,
-				8F3F7983267922D4000B852F /* SceneDelegate.h */,
-				8F3F7984267922D4000B852F /* SceneDelegate.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -205,6 +239,8 @@
 			children = (
 				BA98F698268A615600ECA59F /* NetworkManager.m */,
 				BA98F69B268A616D00ECA59F /* NetworkManager.h */,
+				BA09C653268DBA1A00215B98 /* Enums.m */,
+				BA09C655268DBA7A00215B98 /* Enums.h */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -282,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA98F691268A599D00ECA59F /* Feed.m in Sources */,
+				BA09C64C268D009700215B98 /* LocationService.m in Sources */,
 				8F3F7988267922D4000B852F /* MainViewController.m in Sources */,
 				8F3F7982267922D4000B852F /* AppDelegate.m in Sources */,
 				BA98F6392685D10700ECA59F /* DestinationCell.m in Sources */,
@@ -290,9 +327,12 @@
 				8F3F79A426792A9A000B852F /* Airport.m in Sources */,
 				BA98F63C2685D31C00ECA59F /* PlacesViewController.m in Sources */,
 				8F3F79A1267926DC000B852F /* City.m in Sources */,
-				8F3F7993267922D8000B852F /* main.m in Sources */,
 				8F3F79A726792C7A000B852F /* DataManager.m in Sources */,
-				8F3F7985267922D4000B852F /* SceneDelegate.m in Sources */,
+				BA09C650268D028E00215B98 /* MapPrice.m in Sources */,
+				BA09C654268DBA1A00215B98 /* Enums.m in Sources */,
+				BA09C652268D0D4000215B98 /* main.m in Sources */,
+				BA09C657268DBBDB00215B98 /* Ticket.m in Sources */,
+				BA09C649268D001300215B98 /* MapViewController.m in Sources */,
 				BA98F68C268A54E000ECA59F /* FeedViewController.m in Sources */,
 				BA98F699268A615600ECA59F /* NetworkManager.m in Sources */,
 				8F3F799E26792514000B852F /* Country.m in Sources */,
@@ -432,7 +472,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F7VPDNN42Y;
+				DEVELOPMENT_TEAM = KB66U8JA8X;
 				INFOPLIST_FILE = AirPortG5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,7 +494,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F7VPDNN42Y;
+				DEVELOPMENT_TEAM = KB66U8JA8X;
 				INFOPLIST_FILE = AirPortG5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
