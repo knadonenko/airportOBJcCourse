@@ -29,6 +29,8 @@
 		BA5FEA3C269C688D000E6F61 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5FEA3B269C688D000E6F61 /* FirstViewController.m */; };
 		BA5FEA40269C6CCC000E6F61 /* NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5FEA3F269C6CCC000E6F61 /* NotificationCenter.m */; };
 		BA5FEA44269C6D96000E6F61 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5FEA43269C6D96000E6F61 /* ProgressView.m */; };
+		BA5FEA53269C8185000E6F61 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA5FEA55269C8185000E6F61 /* Localizable.strings */; };
+		BA5FEA58269C81AF000E6F61 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA5FEA5A269C81AF000E6F61 /* Localizable.strings */; };
 		BA82BAF82693993300212F9B /* TicketsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA82BAF62693993300212F9B /* TicketsDataModel.xcdatamodeld */; };
 		BA82BB872694AB6700212F9B /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA82BB862694AB6700212F9B /* CoreDataHelper.m */; };
 		BA82BB892694AC3900212F9B /* FavoriteTicket+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BA82BB882694AC3900212F9B /* FavoriteTicket+CoreDataProperties.m */; };
@@ -86,6 +88,10 @@
 		BA5FEA3F269C6CCC000E6F61 /* NotificationCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationCenter.m; sourceTree = "<group>"; };
 		BA5FEA42269C6D96000E6F61 /* ProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		BA5FEA43269C6D96000E6F61 /* ProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		BA5FEA51269C80FA000E6F61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BA5FEA52269C80FF000E6F61 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BA5FEA54269C8185000E6F61 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BA5FEA59269C81AF000E6F61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BA82BAF72693993300212F9B /* TicketsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TicketsDataModel.xcdatamodel; sourceTree = "<group>"; };
 		BA82BB852694AB5900212F9B /* CoreDataHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
 		BA82BB862694AB6700212F9B /* CoreDataHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
@@ -179,9 +185,10 @@
 				BA41D2542681CE74008526FE /* ViewControllers */,
 				8F3F799B267924C3000B852F /* Model */,
 				8F3F798C267922D8000B852F /* Assets.xcassets */,
+				BA5FEA5A269C81AF000E6F61 /* Localizable.strings */,
 				8F3F7991267922D8000B852F /* Info.plist */,
 				BA09C651268D0D4000215B98 /* main.m */,
-				BA82BAF62693993300212F9B /* TicketsDataModel.xcdatamodeld */,
+				BA5FEA55269C8185000E6F61 /* Localizable.strings */,
 			);
 			path = AirPortG5;
 			sourceTree = "<group>";
@@ -292,6 +299,7 @@
 		BA82BB822694AB2300212F9B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				BA82BAF62693993300212F9B /* TicketsDataModel.xcdatamodeld */,
 				BA82BB842694AB4200212F9B /* CoreDataEntities */,
 				BA82BB832694AB3500212F9B /* CoreDataHelper */,
 			);
@@ -474,6 +482,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 8F3F7974267922D4000B852F;
 			productRefGroup = 8F3F797E267922D4000B852F /* Products */;
@@ -493,6 +502,8 @@
 				8F3F79AD26793DD8000B852F /* cities.json in Resources */,
 				8F3F7990267922D8000B852F /* LaunchScreen.storyboard in Resources */,
 				8F3F79AE26793DD8000B852F /* countries.json in Resources */,
+				BA5FEA58269C81AF000E6F61 /* Localizable.strings in Resources */,
+				BA5FEA53269C8185000E6F61 /* Localizable.strings in Resources */,
 				8F3F798D267922D8000B852F /* Assets.xcassets in Resources */,
 				8F3F79AF26793DD8000B852F /* airports.json in Resources */,
 			);
@@ -588,8 +599,26 @@
 			isa = PBXVariantGroup;
 			children = (
 				8F3F798F267922D8000B852F /* Base */,
+				BA5FEA51269C80FA000E6F61 /* en */,
+				BA5FEA52269C80FF000E6F61 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BA5FEA55269C8185000E6F61 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA5FEA54269C8185000E6F61 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		BA5FEA5A269C81AF000E6F61 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA5FEA59269C81AF000E6F61 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -782,7 +811,8 @@
 				BA82BAF72693993300212F9B /* TicketsDataModel.xcdatamodel */,
 			);
 			currentVersion = BA82BAF72693993300212F9B /* TicketsDataModel.xcdatamodel */;
-			path = TicketsDataModel.xcdatamodeld;
+			name = TicketsDataModel.xcdatamodeld;
+			path = ../TicketsDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
