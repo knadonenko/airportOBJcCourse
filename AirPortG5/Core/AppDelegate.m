@@ -25,6 +25,8 @@
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
 
+    [[NotificationCenter sharedInstance] registerService];
+
     return YES;
 }
 

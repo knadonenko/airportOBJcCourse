@@ -77,4 +77,16 @@
     [_airlineLogoView yy_setImageWithURL:urlLogo options:YYWebImageOptionSetImageWithFadeAnimation];
 }
 
+- (void)animate {
+
+    self.transform = CGAffineTransformMakeTranslation(0, self.frame.size.height);
+    [UIView animateWithDuration:0.0
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+        self.transform = CGAffineTransformMakeTranslation(0, 0);
+    } completion: NULL];
+
+}
+
 @end
